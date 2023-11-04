@@ -1,0 +1,15 @@
+version: '3'
+services:
+  tacticwebbackend:
+    build:
+      context: ./
+      dockerfile: ./config/docker/backend/dev.dockerfile
+    restart: always
+    user: 1000:1000
+    volumes:
+     - ./tacticwebbackend:/app
+    environment:
+      MONGO_URI: ${MONGO_URI}
+      MONGO_DB_NAME: ${MONGO_DB_NAME}
+    ports:
+      - $BACKEND_PORT:3000
