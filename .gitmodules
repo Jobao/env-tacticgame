@@ -1,0 +1,3 @@
+[submodule "tactic-game-backend-nestjs"]
+	path = tactic-game-backend-nestjs
+	url = git@github.com:Jobao/tactic-game-backend-nestjs.git
