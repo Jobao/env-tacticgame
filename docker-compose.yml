@@ -1,15 +1,27 @@
 version: '3'
 services:
-  tacticwebbackend:
+  tactic-game-backend-nestjs:
     build:
       context: ./
       dockerfile: ./config/docker/backend/dev.dockerfile
     restart: always
     user: 1000:1000
     volumes:
-     - ./tacticwebbackend:/app
+     - ./tactic-game-backend-nestjs:/app
     environment:
       MONGO_URI: ${MONGO_URI}
       MONGO_DB_NAME: ${MONGO_DB_NAME}
     ports:
       - $BACKEND_PORT:3000
+
+  mongo:
+    image: mongo:5
+    build: 
+      dockerfile: ./config/docker/mongo.dockerfile
+    user: 1000:1000
+    restart: always
+    volumes:
+      - ./data/mongo:/data/db
+    ports:
+      - $MONGO_PORT:27017
+    
