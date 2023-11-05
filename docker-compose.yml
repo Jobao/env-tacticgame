@@ -16,8 +16,6 @@ services:
 
   mongo:
     image: mongo:5
-    build: 
-      dockerfile: ./config/docker/mongo.dockerfile
     user: 1000:1000
     restart: always
     volumes:

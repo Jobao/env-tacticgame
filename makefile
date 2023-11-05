@@ -4,6 +4,7 @@ init: # environment init
 	git submodule init
 	git submodule update --init tactic-game-backend-nestjs
 #	git submodule update --init frontend
+	mkdir -p data && mkdir -p data/mongo
 	cp ./config/envdata ./.env
 	cd tactic-game-backend-nestjs && git checkout main && git pull origin main
 #	cd frontend && git checkout main && git pull origin main
