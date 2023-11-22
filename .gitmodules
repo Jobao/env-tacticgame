@@ -1,3 +1,6 @@
 [submodule "tactic-game-backend-nestjs"]
 	path = tactic-game-backend-nestjs
 	url = git@github.com:Jobao/tactic-game-backend-nestjs.git
+[submodule "tactic-game-frontend-nextjs"]
+	path = tactic-game-frontend-nextjs
+	url = git@github.com:Jobao/tactic-game-frontend-nextjs.git
